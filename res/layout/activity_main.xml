@@ -9,8 +9,23 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/tv_token"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="TOKEN"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:max="240"
+        android:layout_below="@+id/tv_token"
+        android:layout_marginTop="19dp" />
 
 </RelativeLayout>

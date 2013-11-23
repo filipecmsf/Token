@@ -22,5 +22,9 @@ public class Converter {
 		
 		return Integer.toBinaryString(Integer.valueOf(valor));
 	}
+	
+	public static Integer stringBinarioParaInteger(String valor){
+		return Integer.valueOf(valor, 2);
+	}
 
 }
