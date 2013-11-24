@@ -18,7 +18,6 @@ public class TOTP {
 
 	private static Integer tokenAtual;
 	private static Integer tokenProximo;
-	private static Integer chave = 364987;
 	public static Integer getTokenAtual() {
 		return tokenAtual;
 	}
@@ -114,46 +113,12 @@ public class TOTP {
         b = b.divide(new BigInteger("30000"));
         time = b.toString(16).toUpperCase();
         while(time.length() < 16) time = "0" + time;
-        System.out.print(" " + time + " | ");
-        tokenAtual = Integer.valueOf(generateTOTP(seed, time, "6"));
+        tokenAtual = Integer.valueOf(generateTOTP(seed, time, "8"));
+        
+        if(new String().valueOf(tokenAtual).length() < 8){
+        	Log.d("AsyncTOKEN","ajuste do token: ");
+			tokenAtual = Integer.valueOf(tokenAtual.toString() + "0");
+		}
         
 	}
-	
-//	public static void setTokens(){
-//		
-//		Timer.setVariaveis();
-//		
-//		Integer soma = 0;
-//		
-//		/**primeiro passo
-//		 *
-//		 * @operacao 	- somar horario com data
-//		 * @resultado - cadeia de 12 bits 
-//		 */
-//		String horario = Timer.getHorario();
-//		String data = Timer.getData();
-//		
-//		soma = Integer.valueOf(horario) + Integer.valueOf(data);
-//		
-//		/**segundo passo
-//		 *
-//		 * @operacao - concatenar cadeia de 12 bits do primeiro passo com os 12 bits do ano 
-//		 * @resultado - cadeia de 24 bits 
-//		 */
-//		
-//		Integer ano = Timer.getAno();
-//		soma = Integer.valueOf(soma.toString() + ano.toString());
-//		
-//		/**terceiro passo
-//		 *
-//		 * @operacao - somar o resultado com a chave do usuario 
-//		 * @resultado - cadeia de 24 bits 
-//		 */
-//
-//		soma = soma + chave;
-//		Log.d("TOKEN", Converter.integerParaBinario(soma));
-//		Log.d("TOKEN", soma.toString());
-//		
-//		tokenAtual = soma;
-//	}
 }

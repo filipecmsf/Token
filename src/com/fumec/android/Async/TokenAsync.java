@@ -28,6 +28,16 @@ public class TokenAsync extends AsyncTask<Integer ,Integer ,Integer>{
 				Timer.setVariaveis();
 				timer = Integer.valueOf(Timer.getSegundos())*4;
 				
+				 activity.runOnUiThread(new Runnable() {
+						
+						@Override
+						public void run() {
+							activity.atualizaToken(TOTP.getTokenAtual().toString());
+							Log.d("AsyncTOKEN","Horario: " + Timer.getData() + " " + Timer.getHorario());
+							Log.d("AsyncTOKEN","Token  : " + TOTP.getTokenAtual().toString());
+						}
+					});
+				
 	              while (timer < 240) {
 	            	  if(timer == 0){
 	            		  TOTP.setTokens();

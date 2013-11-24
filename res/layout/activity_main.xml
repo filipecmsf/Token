@@ -5,34 +5,36 @@
     tools:context=".MainActivity" >
 
     <TextView
-        android:id="@+id/tv_token"
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:text="TOKEN"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+
+    <TextView
+        android:id="@+id/tvToken"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="72dp"
         android:text="--"
+        android:textSize="30sp"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="wrap_content"
+        android:id="@+id/pbTImeCounter"
+        style="@style/ProgressBarAppToken"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="true"
-        android:max="240"
-        android:layout_below="@+id/tv_token"
-        android:layout_marginTop="19dp" 
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"/>
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/tv_token"
         android:layout_centerHorizontal="true"
-        android:text="Token"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:max="240"
+        android:progress="120" />
 
 </RelativeLayout>

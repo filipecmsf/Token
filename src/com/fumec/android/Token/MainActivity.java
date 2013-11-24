@@ -22,8 +22,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		mProgress = (ProgressBar) findViewById(R.id.progressBar);
-		tvToken = (TextView) findViewById(R.id.tv_token);
+		mProgress = (ProgressBar) findViewById(R.id.pbTImeCounter);
+		tvToken = (TextView) findViewById(R.id.tvToken);
 		
 		Intent i= new Intent(this, AtualizaToken.class);
 		
