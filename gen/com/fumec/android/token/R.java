@@ -11,21 +11,115 @@ public final class R {
     public static final class attr {
     }
     public static final class dimen {
-        /**  Default screen margins, per the Android Design guidelines. 
-
+        /** 
          Customize dimensions originally defined in res/values/dimens.xml (such as
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
         public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int btn_check_off_disabled_focused_holo_light=0x7f020000;
+        public static final int btn_check_off_disabled_holo_light=0x7f020001;
+        public static final int btn_check_off_focused_holo_light=0x7f020002;
+        public static final int btn_check_off_holo_light=0x7f020003;
+        public static final int btn_check_off_pressed_holo_light=0x7f020004;
+        public static final int btn_check_on_disabled_focused_holo_light=0x7f020005;
+        public static final int btn_check_on_disabled_holo_light=0x7f020006;
+        public static final int btn_check_on_focused_holo_light=0x7f020007;
+        public static final int btn_check_on_holo_light=0x7f020008;
+        public static final int btn_check_on_pressed_holo_light=0x7f020009;
+        public static final int btn_default_disabled_focused_holo_light=0x7f02000a;
+        public static final int btn_default_disabled_holo_light=0x7f02000b;
+        public static final int btn_default_focused_holo_light=0x7f02000c;
+        public static final int btn_default_normal_holo_light=0x7f02000d;
+        public static final int btn_default_pressed_holo_light=0x7f02000e;
+        public static final int btn_radio_off_disabled_focused_holo_light=0x7f02000f;
+        public static final int btn_radio_off_disabled_holo_light=0x7f020010;
+        public static final int btn_radio_off_focused_holo_light=0x7f020011;
+        public static final int btn_radio_off_holo_light=0x7f020012;
+        public static final int btn_radio_off_pressed_holo_light=0x7f020013;
+        public static final int btn_radio_on_disabled_focused_holo_light=0x7f020014;
+        public static final int btn_radio_on_disabled_holo_light=0x7f020015;
+        public static final int btn_radio_on_focused_holo_light=0x7f020016;
+        public static final int btn_radio_on_holo_light=0x7f020017;
+        public static final int btn_radio_on_pressed_holo_light=0x7f020018;
+        public static final int btn_rating_star_off_focused_holo_light=0x7f020019;
+        public static final int btn_rating_star_off_normal_holo_light=0x7f02001a;
+        public static final int btn_rating_star_off_pressed_holo_light=0x7f02001b;
+        public static final int btn_rating_star_on_focused_holo_light=0x7f02001c;
+        public static final int btn_rating_star_on_normal_holo_light=0x7f02001d;
+        public static final int btn_rating_star_on_pressed_holo_light=0x7f02001e;
+        public static final int btn_toggle_off_disabled_focused_holo_light=0x7f02001f;
+        public static final int btn_toggle_off_disabled_holo_light=0x7f020020;
+        public static final int btn_toggle_off_focused_holo_light=0x7f020021;
+        public static final int btn_toggle_off_normal_holo_light=0x7f020022;
+        public static final int btn_toggle_off_pressed_holo_light=0x7f020023;
+        public static final int btn_toggle_on_disabled_focused_holo_light=0x7f020024;
+        public static final int btn_toggle_on_disabled_holo_light=0x7f020025;
+        public static final int btn_toggle_on_focused_holo_light=0x7f020026;
+        public static final int btn_toggle_on_normal_holo_light=0x7f020027;
+        public static final int btn_toggle_on_pressed_holo_light=0x7f020028;
+        public static final int fastscroll_thumb_default_holo=0x7f020029;
+        public static final int fastscroll_thumb_pressed_holo=0x7f02002a;
+        public static final int ic_launcher=0x7f02002b;
+        public static final int list_activated_holo=0x7f02002c;
+        public static final int list_focused_holo=0x7f02002d;
+        public static final int list_longpressed_holo=0x7f02002e;
+        public static final int list_pressed_holo_light=0x7f02002f;
+        public static final int list_selector_disabled_holo_light=0x7f020030;
+        public static final int numberpicker_selection_divider=0x7f020031;
+        public static final int progress_bg_holo_light=0x7f020032;
+        public static final int progress_primary_holo_light=0x7f020033;
+        public static final int progress_secondary_holo_light=0x7f020034;
+        public static final int progressbar_indeterminate_holo1=0x7f020035;
+        public static final int progressbar_indeterminate_holo2=0x7f020036;
+        public static final int progressbar_indeterminate_holo3=0x7f020037;
+        public static final int progressbar_indeterminate_holo4=0x7f020038;
+        public static final int progressbar_indeterminate_holo5=0x7f020039;
+        public static final int progressbar_indeterminate_holo6=0x7f02003a;
+        public static final int progressbar_indeterminate_holo7=0x7f02003b;
+        public static final int progressbar_indeterminate_holo8=0x7f02003c;
+        public static final int rate_star_big_half_holo_light=0x7f02003d;
+        public static final int rate_star_big_off_holo_light=0x7f02003e;
+        public static final int rate_star_big_on_holo_light=0x7f02003f;
+        public static final int rate_star_small_half_holo_light=0x7f020040;
+        public static final int rate_star_small_off_holo_light=0x7f020041;
+        public static final int rate_star_small_on_holo_light=0x7f020042;
+        public static final int scrubber_control_disabled_holo=0x7f020043;
+        public static final int scrubber_control_focused_holo=0x7f020044;
+        public static final int scrubber_control_normal_holo=0x7f020045;
+        public static final int scrubber_control_pressed_holo=0x7f020046;
+        public static final int scrubber_primary_holo=0x7f020047;
+        public static final int scrubber_secondary_holo=0x7f020048;
+        public static final int scrubber_track_holo_light=0x7f020049;
+        public static final int spinner_default_holo_light=0x7f02004a;
+        public static final int spinner_disabled_holo_light=0x7f02004b;
+        public static final int spinner_focused_holo_light=0x7f02004c;
+        public static final int spinner_pressed_holo_light=0x7f02004d;
+        public static final int switch_bg_disabled_holo_light=0x7f02004e;
+        public static final int switch_bg_focused_holo_light=0x7f02004f;
+        public static final int switch_bg_holo_light=0x7f020050;
+        public static final int switch_thumb_activated_holo_light=0x7f020051;
+        public static final int switch_thumb_disabled_holo_light=0x7f020052;
+        public static final int switch_thumb_holo_light=0x7f020053;
+        public static final int switch_thumb_pressed_holo_light=0x7f020054;
+        public static final int tab_selected_focused_holo=0x7f020055;
+        public static final int tab_selected_holo=0x7f020056;
+        public static final int tab_selected_pressed_holo=0x7f020057;
+        public static final int tab_unselected_focused_holo=0x7f020058;
+        public static final int tab_unselected_holo=0x7f020059;
+        public static final int tab_unselected_pressed_holo=0x7f02005a;
+        public static final int textfield_activated_holo_light=0x7f02005b;
+        public static final int textfield_default_holo_light=0x7f02005c;
+        public static final int textfield_disabled_focused_holo_light=0x7f02005d;
+        public static final int textfield_disabled_holo_light=0x7f02005e;
+        public static final int textfield_focused_holo_light=0x7f02005f;
     }
     public static final class id {
-        public static final int action_settings=0x7f080002;
+        public static final int action_settings=0x7f080003;
         public static final int progressBar=0x7f080001;
+        public static final int tv_title=0x7f080002;
         public static final int tv_token=0x7f080000;
     }
     public static final class layout {

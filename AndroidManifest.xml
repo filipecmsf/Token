@@ -23,8 +23,6 @@
             </intent-filter>
         </activity>
         
-        <service android:name="com.fumec.android.Service.AtualizaToken" >
-		</service> 
     </application>
 
 </manifest>

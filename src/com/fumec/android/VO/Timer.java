@@ -14,6 +14,8 @@ public class Timer {
 	private static Integer ano;
 	private static String data;
 	private static String horario;
+	private static String segundos;
+	private static Date date;
 	
 	public static Integer getHora() {
 		return hora;
@@ -36,6 +38,12 @@ public class Timer {
 	public static Integer getAno() {
 		return ano;
 	}
+	public static String getSegundos(){
+		return segundos;
+	}
+	public static Date getDate(){
+		return date;
+	}
 
 	public static void setVariaveis(){
 		
@@ -44,15 +52,17 @@ public class Timer {
 		DateFormat dateFormatDia = new SimpleDateFormat("dd");
 		DateFormat dateFormatMes = new SimpleDateFormat("MM");
 		DateFormat dateFormatAno = new SimpleDateFormat("yyyy");
-		Date date = new Date();
+		DateFormat dateFormatSeg = new SimpleDateFormat("ss");
+		date = new Date();
 		
 		hora = Integer.valueOf(dateFormatHora.format(date));
 		minuto = Integer.valueOf(dateFormatMin.format(date));
 		dia = Integer.valueOf(dateFormatDia.format(date));
 		mes = Integer.valueOf(dateFormatMes.format(date));
 		ano = Integer.valueOf(dateFormatAno.format(date));
+		segundos = String.valueOf(dateFormatSeg.format(date));
 		
-		Log.d("DATA: ", hora + ":" + minuto + " " + dia + "/" + mes + "/" + ano );
+		Log.d("DATA: ", hora + ":" + minuto + ":" + segundos + " " + dia + "/" + mes + "/" + ano );
 		
 		horario = ( hora.toString().length() == 1 ? "0" + hora.toString() : hora.toString() ) 
 				+ ( minuto.toString().length() == 1 ? "0" + minuto.toString() : minuto.toString() ); 

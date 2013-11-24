@@ -3,10 +3,10 @@ package com.fumec.android.Token;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.Menu;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 import com.fumec.android.Async.TokenAsync;
 import com.fumec.android.Service.AtualizaToken;
@@ -15,8 +15,7 @@ import com.fumec.android.Util.TOTP;
 public class MainActivity extends Activity {
 
 	private ProgressBar mProgress;
-    private int mProgressStatus = 0;
-    private Handler mHandler = new Handler();
+	private TextView tvToken;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +23,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		mProgress = (ProgressBar) findViewById(R.id.progressBar);
+		tvToken = (TextView) findViewById(R.id.tv_token);
 		
 		Intent i= new Intent(this, AtualizaToken.class);
 		
@@ -31,25 +31,6 @@ public class MainActivity extends Activity {
 		
 		TokenAsync tokenAsync = new TokenAsync(this);
 		tokenAsync.execute();
-		
-//		new Thread(new Runnable() {
-//            public void run() {
-//                while (mProgressStatus < 100) {
-//                    mProgressStatus = mProgressStatus + 1;
-//                    try {
-//						Thread.sleep(250);
-//					} catch (InterruptedException e) {
-//						e.printStackTrace();
-//					}
-//                    // Update the progress bar
-//                    mHandler.post(new Runnable() {
-//                        public void run() {
-//                            mProgress.setProgress(mProgressStatus);
-//                        }
-//                    });
-//                }
-//            }
-//        }).start();
 		
 		TOTP.setTokens();
 		Integer token = TOTP.getTokenAtual();
@@ -66,6 +47,10 @@ public class MainActivity extends Activity {
 	
 	public void atualizaProgress(Integer valor){
 		mProgress.setProgress(valor);
+	}
+	
+	public void atualizaToken(String valor){
+		tvToken.setText(valor);
 	}
 
 }
